@@ -13,6 +13,6 @@ rl.question('> Enter a user on github : ',function(ans){
         }else{
             console.log(repo);
         }
-        rl.close();
     })
+    rl.close();
 });

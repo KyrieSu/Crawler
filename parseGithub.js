@@ -2,13 +2,13 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 // exports.getRepos = function getRepos(user, callback(err, repos))
-// username = KyrieSu // repos = ?tab=repositories
 
 exports.getRepos = function(username,callback){
     var url = 'https://github.com/' + username + '?tab=repositories';
     request(url,function(err,res,body){
         if(err){
             callback(err);
+            return;
         }else{
             $ = cheerio.load(body); //get html
             var info = [];
@@ -25,7 +25,7 @@ exports.getRepos = function(username,callback){
     */
         var output = [];
         for(var i=0;i<info.length;i++){
-            output.push(info[i][1].split(' ')[8]);
+            output.push(info[i][1].trim().substring(0));
         }
         callback(err,output);
     });
