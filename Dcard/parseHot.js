@@ -9,9 +9,11 @@ request('https://www.dcard.tw/f',function(err,res,body){
     $ = cheerio.load(body);
     var article = [];
     var tmp = $('.PostEntry_title_t1BVP').each(function(index,elem){
+        if(index==10) return false;
         article.push( { title : $(elem).text().split('\n')[0] } );
     })
     var tmp = $('.PostLikeCount_likeCount_2uhBH').each(function(index,elem){
+        if(index == 10) return false;
         article[index].good = $(elem).text();
     })
     console.log(article);
