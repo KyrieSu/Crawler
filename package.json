@@ -1,0 +1,24 @@
+{
+  "name": "Crawler",
+  "version": "1.0.0",
+  "description": "Crawler",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "request": "^2.74.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyrieSu/Crawler.git"
+  },
+  "author": "KyrieSu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KyrieSu/Crawler/issues"
+  },
+  "homepage": "https://github.com/KyrieSu/Crawler#readme"
+}

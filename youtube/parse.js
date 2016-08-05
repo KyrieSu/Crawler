@@ -8,13 +8,10 @@ exports.getinfo = function(url,callback){
             return;
         }else{
             $ = cheerio.load(body);
-            var info = [];
-            var video_title = $('#eow-title').each(function(index,elem){
-                info.push({ title :  $(elem).text().split('\n')[1].trim() });
-            });
-            var video_count = $('.watch-view-count').each(function(index,elem){
-                info[index].watch = $(elem).text().substring(5);
-            })
+            var info = {
+                title : $('#eow-title').text().split('\n')[1].trim(),
+                watch : $('.watch-view-count').text().substring(5).replace(/,/g,'') //global replace
+            };
         }
         callback(err,info);
     })
