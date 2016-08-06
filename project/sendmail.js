@@ -1,6 +1,8 @@
 var nodemailer = require('nodemailer');
 var fs = require('fs')
-//exports.sendmail = function(){
+exports.sendmail = function(){
+
+
 function readfile(callback){
     var info = [];
     fs.readFile('maillist.json','utf-8',function(err,data){
@@ -15,26 +17,18 @@ function readfile(callback){
 
 function send(){
     readfile(function(data){
-        var str = '';
+        var reciever = '';
         for(var i=0;i<data.length;i++){
-            str += data[i].mail;
+            reciever += data[i].mail;
         }
-        var reciever = str.replace(/ /g,','); // reciever format
         //create object using SMTP transport
-        var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
-        /*var transporter = nodemailer.createTransport({
-            service : 'gmail',
-            auth:{
-                user : 'amo3082˙',
-                pass : 'm2i0c8h2a8EL'
-            }
-        });*/
+        var transporter = nodemailer.createTransport('smtps://amo30827@gmail.com:m2i0c8h2a8el@smtp.gmail.com');
         var mailOptions = {
-            from : "amo30827@gmail.com" , //sender e-mail address
+            from : "watermelo0326@gmail.com" , //sender e-mail address
             to : reciever , // receiver e-mail address
             subject : 'find new push',
             text : 'New commit in KyrieSu/Crawler',
-            html : '<a href = "https://github.com/KyrieSu/Crawler">LINK</a>'
+            html : '<a href = "https://github.com/KyrieSu/Crawler"> New commit in KyrieSu/Crawler </a>'
         };
         transporter.sendMail(mailOptions,function(err,info){
             if(err){
@@ -45,6 +39,4 @@ function send(){
     })
 }
 
-send()
-
-//}
+}
