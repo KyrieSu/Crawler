@@ -1,7 +1,7 @@
 var request = require('request');
 var cheerio = require('cheerio');
 
-var commit_count = 24;
+var commit_count = 26;
 
 exports.getNewCommit = function (callback){
     request('https://github.com/KyrieSu/Crawler',function(err,res,body){
