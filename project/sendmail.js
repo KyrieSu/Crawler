@@ -14,7 +14,7 @@ function readfile(callback){
     })
 }
 
-exports.send = function (callback){
+exports.send = function(callback){
     readfile(function(err,data){
         if(err){
             callback(err,'fail in maillist');
@@ -37,6 +37,7 @@ exports.send = function (callback){
         transporter.sendMail(mailOptions,function(err,info){
             if(err){
                 callback(err,'fail in sendMail');
+                return;
             }
             callback(err,'success');
         });
