@@ -10,7 +10,7 @@ exports.getNewCommit = function(callback){
         }
         var $ = cheerio.load(body);
         // convert string into int
-        var nowCommit = parseInt($('.commits.text-emphasized').text()); //$(.num .text-emphasized)
+        var nowCommit = parseInt($('.num.text-emphasized').text());
         callback(err,nowCommit);
     })
 }

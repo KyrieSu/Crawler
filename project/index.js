@@ -1,7 +1,7 @@
 var send = require('./sendmail.js');
 var commit = require('./commit.js');
 
-var commit_num = 27;
+var timer = 0 , commit_num = 0;
 
 function loop(){
     setTimeout(function(){
@@ -10,6 +10,12 @@ function loop(){
                 console.log(err);
                 return;
             }
+            if(timer==0){
+                commit_num = num;
+                timer = 1;
+                return;
+            }
+            //console.log(num , commit_num);
             if(num!=commit_num){ //new commit
                 commit_num = num;
                 send.send(function(err,msg){
@@ -24,7 +30,7 @@ function loop(){
             }
         })
         loop();
-    },20*1000);
+    },10*1000);
 }
 
 loop();
