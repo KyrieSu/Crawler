@@ -3,7 +3,7 @@ var fs = require('fs')
 
 
 function readfile(callback){
-    var info = [];
+    var info = {};
     fs.readFile('maillist.json','utf-8',function(err,data){
         if(err){
             callback(err,info);
