@@ -14,7 +14,7 @@ function readfile(callback){
     })
 }
 
-exports.send = function(callback){
+module.exports = function send(callback){
     readfile(function(err,data){
         if(err){
             callback(err,'fail in maillist');

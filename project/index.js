@@ -5,7 +5,7 @@ var timer = 0 , commit_num = 0;
 
 function loop(){
     setTimeout(function(){
-        commit.getNewCommit(function(err,num){
+        commit(function(err,num){
             if(err){
                 console.log(err);
                 return;
@@ -18,7 +18,7 @@ function loop(){
             //console.log(num , commit_num);
             if(num!=commit_num){ //new commit
                 commit_num = num;
-                send.send(function(err,msg){
+                send(function(err,msg){
                     if(err){
                         console.log(err);
                         return;

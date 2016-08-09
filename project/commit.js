@@ -2,7 +2,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 
-exports.getNewCommit = function(callback){
+module.exports = function getNewCommit(callback){
     request('https://github.com/KyrieSu/Crawler',function(err,res,body){
         if(err){
             callback(err,'fail in getNewCommit');
