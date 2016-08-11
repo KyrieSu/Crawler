@@ -15,7 +15,7 @@ practice crawler by cheerio
 - [x] cheerio 爬 Github
 - [x] cheerio 爬 Dcard
 - [x] cheerio 爬 Youtube
-- [x] project: 監控最新 push 並且發信
+- [x] Project: 監控最新 push 並且發信
 
 ### HTTP, request, mysql
 
@@ -25,13 +25,13 @@ practice crawler by cheerio
 - [ ] 用 request module 發不帶資料的 POST request 給 server
 - [ ] 用 request module 發帶資料的 POST request 給 server
 - [ ] 用 Node.js 操作 mysql (新增、刪除資料)
-- [ ] project: 實做一個學生資料網站的後端，有新增、刪除資料的功能
+- [ ] Project: 實做一個學生資料網站的後端，有新增、刪除資料的功能
 
 ### Socket, HTTP
 
 - [ ] 寫一個 Socket Client 連接 Socket Server
 - [ ] 實做 Socket Server
-- [ ] project: 結合 Socket Server, Client 完成一個小型聊天室
+- [ ] Project: 結合 Socket Server, Client 完成一個小型聊天室
 
 
 
