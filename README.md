@@ -21,9 +21,9 @@ practice crawler by cheerio
 
 - [x] 架基本的 HTTP server
 - [x] 在 server 得到 GET request 的 querystring
-- [ ] 用 request module 發 GET request 給 server
-- [ ] 用 request module 發不帶資料的 POST request 給 server
-- [ ] 用 request module 發帶資料的 POST request 給 server
+- [x] 用 request module 發 GET request 給 server
+- [x] 用 request module 發不帶資料的 POST request 給 server
+- [x] 用 request module 發帶資料的 POST request 給 server
 - [ ] 用 Node.js 操作 mysql (新增、刪除資料)
 - [ ] Project: 實做一個學生資料網站的後端，有新增、刪除資料的功能
 
